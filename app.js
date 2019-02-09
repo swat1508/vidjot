@@ -33,7 +33,7 @@ const db = require('./config/database');
 /*Sec6-Lec35
 mongoose.connect('mongodb://localhost/vidjot-dev',{    */
 mongoose.connect(db.mongoURI,{              //Sec6-Lec35
-//  useMongoClient : true
+ useMongoClient : true
 }).then(() => console.log('Mongo DB is Connected ...'))
   .catch(err => console.log(err));
 
