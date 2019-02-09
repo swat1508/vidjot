@@ -1,0 +1,37 @@
+<!--
+{{#each errors}}
+<div class="alert alert-danger">
+  {{text}}
+</div>
+
+{{else}}
+
+{{/each}}
+
+The above is cut and pasted in _error.handlebars to make it generic -->
+
+<h1>Add</h1>
+
+<div class="card card-body">
+  <h3>Video Idea</h3>
+<form action="/ideas" method="post">
+<div class="form-group">
+  <label for="title"> Title</label>
+  <!--
+  <input type="text" class="form-control" name="title" required>
+  -->
+    <input type="text" class="form-control" name="title">
+</div>
+
+<div class="form-group">
+  <label for="details"> Details </label>
+  <!--
+  <textarea rows="4" cols="50" class="form-control" cols="50" name="details" required> -->
+     <textarea rows="4" cols="50" class="form-control" cols="50" name="details"></textarea>
+</textarea>
+</div>
+
+<button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
+</div>

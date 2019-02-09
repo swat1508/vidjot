@@ -1,0 +1,15 @@
+{{#if error}} <!-- Sec5_Lec31 Starts --> 
+<div class="alert alert-danger">
+  {{error}}
+</div>
+{{/if}}  <!-- Sec5_Lec31 Ends --> 
+
+{{#each errors}}
+<div class="alert alert-danger">
+  {{text}}
+</div>
+
+{{else}}
+
+{{/each}}
+

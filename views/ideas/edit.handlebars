@@ -1,0 +1,39 @@
+{{#each errors}}
+<div class="alert alert-danger">
+  {{text}}
+</div>
+
+{{else}}
+
+{{/each}}
+
+<h1>Add</h1>
+
+<div class="card card-body">
+  <h3>Edit Video Idea</h3>
+  <!--
+<form action="/ideas" method="post">
+-->
+<form action="/ideas/{{idea.id}}?_method=PUT" method="post">
+<input type="hidden" name="_method" value="PUT">
+<div class="form-group">
+  <label for="title"> Title</label>
+  <!--
+  <input type="text" class="form-control" name="title" required>
+  -->
+    <input type="text" class="form-control" name="title" value={{idea.title}}>
+</div>
+
+<div class="form-group">
+  <label for="details"> Details </label>
+  <!--
+  <textarea rows="4" cols="50" class="form-control" cols="50" name="details" required> -->
+     <textarea rows="4" cols="50" class="form-control" cols="50" 
+     name="details"> {{idea.details}} </textarea>
+</textarea>
+</div>
+
+<button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
+</div>
