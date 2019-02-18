@@ -32,9 +32,18 @@ const db = require('./config/database');
 //connect to mongoose
 /*Sec6-Lec35
 mongoose.connect('mongodb://localhost/vidjot-dev',{    */
-mongoose.connect(db.mongoURI,{              //Sec6-Lec35
- useMongoClient : true
-}).then(() => console.log('Mongo DB is Connected ...'))
+mongoose.connect(db.mongoURI,{useNewUrlParser: true }).then(() => 
+{
+  console.log('Mongo DB is Connected ...');
+  app.listen(port , () => {
+    console.log(`Server started on port ${port} `);  
+    /*  back tick - used for template string/template literal and basically 
+    it allow us to include variables without having to concatenate
+     The above line is equivalent to 
+    console.log('Server started on port ' + port);
+     */
+  });
+})
   .catch(err => console.log(err));
 
 
@@ -87,14 +96,7 @@ const port =  5000;   */
 const port =  process.env.PORT || 5000;  //Sec6-Lec35
 
 
-app.listen(port , () => {
-  console.log(`Server started on port ${port} `);  
-  /*  back tick - used for template string/template literal and basically 
-  it allow us to include variables without having to concatenate
-   The above line is equivalent to 
-  console.log('Server started on port ' + port);
-   */
-});
+
 
 //How Middleware workds - should be written before index route and about route 
 /*
