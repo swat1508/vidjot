@@ -6,4 +6,4 @@
 // }
 
 
-module.exports = {mongoURI: 'mongodb://swat1508:sinh1508@ds129045.mlab.com:29045/vidjot-prod'};
+module.exports = {mongoURI: 'mongodb://swat1508:sinha1508@ds129045.mlab.com:29045/vidjot-prod'};
